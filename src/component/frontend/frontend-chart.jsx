@@ -130,7 +130,7 @@ const frontendChart = () => {
         .attr("width", Math.min(width / 5, 60)) 
         .attr("height", Math.min(width /5, 60))
         .attr("x", -30)
-        .attr("y", -10);
+        .attr("y", 1);
     };
 
     // Initial render
