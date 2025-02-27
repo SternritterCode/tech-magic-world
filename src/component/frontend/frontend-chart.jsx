@@ -106,7 +106,7 @@ const frontendChart = () => {
       // Add text labels for nodes
       node
         .append("text")
-        .attr("dy", "-1rem")
+        .attr("dy", "-2rem")
         .attr("x", 0) // Move text further to the left for parent nodes
         .style("text-anchor", "middle")
         .style("fill", "white") // White text color
