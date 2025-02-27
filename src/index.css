@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+body {
+  background-color: rgb(51, 51, 51);
+  color: white;
+}
+
+.link {
+  stroke: #aaa;
+  stroke-width: 2px;
+}
+.node circle {
+  fill: steelblue;
+  stroke: white;
+  stroke-width: 2px;
+}
+.node.active circle {
+  stroke: red;
+  stroke-width: 3px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px); /* Start above the screen */
+    opacity: 0; /* Fully transparent */
+  }
+  to {
+    transform: translateY(0); /* End at its normal position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #0ff, 0 0 40px #0ff;
+  }
+  50% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0ff, 0 0 60px #0ff;
+  }
+  100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #0ff, 0 0 40px #0ff;
+  }
+}
+
+.cool-header {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  animation: slideIn 1.5s ease-out, glow 2s infinite alternate;
+}
